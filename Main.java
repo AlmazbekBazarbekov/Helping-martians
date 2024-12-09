@@ -24,7 +24,7 @@ public class Main {
                     int guess = guesses.get(i); // Access each element using its index
                     if (tempBoxPositions.contains(guess)) {
                         correct++;
-                        tempBoxPositions.remove(Integer.valueOf(guess)); // Remove to avoid counting again
+                        tempBoxPositions.remove(Integer.valueOf(guess)); 
     }
 }
                 System.out.println("You guessed " + correct + " boxes correctly!");
