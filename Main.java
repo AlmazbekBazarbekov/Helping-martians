@@ -19,11 +19,14 @@ public class Main {
                 }
 
                 int correct = 0;
-                for (int i = 0; i < 3; i++) {
-                    if (guesses.get(i).equals(boxPositions.get(i))) {
+                ArrayList<Integer> tempBoxPositions = new ArrayList<>(boxPositions);
+                for (int i = 0; i < guesses.size(); i++) {
+                    int guess = guesses.get(i); // Access each element using its index
+                    if (tempBoxPositions.contains(guess)) {
                         correct++;
-                    }
-                }
+                        tempBoxPositions.remove(Integer.valueOf(guess)); // Remove to avoid counting again
+    }
+}
                 System.out.println("You guessed " + correct + " boxes correctly!");
                 if (correct == 3) {
                     System.out.println("Congratulations! All cargo found!");
@@ -36,6 +39,7 @@ public class Main {
             boxPositions = scatterBoxes(random);
         }
     }
+
     public static ArrayList<Integer> scatterBoxes(Random random) {
         ArrayList<Integer> positions = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
