@@ -20,11 +20,11 @@ public class Main {
 
                 int correct = 0;
                 ArrayList<Integer> tempBoxPositions = new ArrayList<>(boxPositions);
-                for (int i = 0; i < guesses.size(); i++) {
-                    int guess = guesses.get(i); 
-                    if (tempBoxPositions.contains(guess)) {
+                for (int i = 0; i < 3; i++) {
+                    if (guesses.get(i).equals(boxPositions.get(0)) || guesses.get(i).equals(boxPositions.get(1)) || guesses.get(i).equals(boxPositions.get(2))) {
                         correct++;
-                        tempBoxPositions.remove(Integer.valueOf(guess)); 
+                    }
+                }
     }
 }
                 System.out.println("You guessed " + correct + " boxes correctly!");
