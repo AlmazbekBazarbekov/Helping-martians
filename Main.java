@@ -21,7 +21,7 @@ public class Main {
                 int correct = 0;
                 ArrayList<Integer> tempBoxPositions = new ArrayList<>(boxPositions);
                 for (int i = 0; i < guesses.size(); i++) {
-                    int guess = guesses.get(i); // Access each element using its index
+                    int guess = guesses.get(i); 
                     if (tempBoxPositions.contains(guess)) {
                         correct++;
                         tempBoxPositions.remove(Integer.valueOf(guess)); 
