@@ -35,3 +35,12 @@ public class Main {
             System.out.println("\nThe boxes have moved to new locations!");
             boxPositions = scatterBoxes(random);
         }
+    }
+    public static ArrayList<Integer> scatterBoxes(Random random) {
+        ArrayList<Integer> positions = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            positions.add(random.nextInt(7) + 1);
+        }
+        return positions;
+    }
+}
